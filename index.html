@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Rentals - Hit the Road in Style</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right, #f7cac9, #ffe699);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0;
+        }
+
+        nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .cta {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero img {
+            width: 50%;
+            border-radius: 5px;
+        }
+
+        .hero-text {
+            width: 50%;
+            padding-left: 20px;
+        }
+
+        .hero h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .available-cars {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .car-card {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .car-card img {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .car-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .car-card button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-section {
+            text-align: center;
+        }
+
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cruise Rentals</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our Cars</a></li>
+                    <button class="cta">Book Now</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/car-rental.jpg" alt="Car driving on a scenic road">
+            <div class="hero-text">
+                <h2>Hit the road in style with Cruise Rentals</h2>
+                <p>Rent a car that perfectly suits your adventure, from zippy compacts to spacious SUVs.</p>
+                <button class="cta">Explore Our Fleet</button>
+            </div>
+        </section>
+
+        <section class="available-cars">
+            <h2>Available Cars</h2>
+            <div class="car-card">
+                <img src="images/car1.jpg" alt="Compact car">
+                <h3>Compact Car</h3>
+                <p>Fuel-efficient and perfect for city driving.</p>
+                <button class="rent-btn">Rent It</button>
+            </div>
+            <div class="car-card">
+                <img src="images/car2.jpg" alt="Sedan car">
+                <h3>Sedan</h3>
+                <p>Comfortable and spacious for longer journeys.</p>
+                <button class="rent-btn">Rent It</button>
+            </div>
+            <div class="car-card">
+                <img src="images/car3.jpg" alt="SUV car">
+                <p>Spacious and perfect for exploring the outdoors.</p>
+                <button class="rent-btn">Rent It</button>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Get a Quote</h2>
+            <form id="rental-form">
+                <div class="form-group">
+                    <label for="pickup-location">Pick-up Location:</label>
+                    <input type="text" id="pickup-location" name="pickup-location" required>
+                </div>
+                <div class="form-group">
+                    <label for="dropoff-location">Drop-off Location:</label>
+                    <input type="text" id="dropoff-location" name="dropoff-location" required>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-date">Pick-up Date:</label>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="dropoff-date">Drop-off Date:</label>
+                    <input type="date" id="dropoff-date" name="dropoff-date" required>
+                </div>
+                <button type="submit">Get Quote</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Cruise Rentals 2024</p>
+    </footer>
+
+    <script>
+        // Add any Javascript functionality here, for example form validation
+        const form = document.getElementById('rental-form');
+
+        form.addEventListener('submit', (event) => {
+            // Prevent default form submission behavior
+            event.preventDefault();
+
+            // Add your form validation logic here
+            // For example, check if all fields are filled
+            console.log('Form submitted!');
+        });
+    </script>
+</body>
+</html>
